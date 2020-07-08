@@ -27,4 +27,8 @@ RUN apt-get update \
     && apt-get install file -y \
     && apt-get install apt-utils -y
 
+# Install the android developer bridge
+RUN apt-get update \
+    && apt install -y android-tools-adb android-tools-fastboot
+
 WORKDIR /project
